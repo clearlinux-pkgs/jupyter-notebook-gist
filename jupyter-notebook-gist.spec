@@ -6,13 +6,13 @@
 #
 Name     : jupyter-notebook-gist
 Version  : 0.4.0
-Release  : 1
+Release  : 2
 URL      : https://pypi.python.org/packages/bf/dc/3296bca66627b57fd11bb6420464ebb7e027478f6bc5b889df2a30c5a94f/jupyter-notebook-gist-0.4.0.tar.gz
 Source0  : https://pypi.python.org/packages/bf/dc/3296bca66627b57fd11bb6420464ebb7e027478f6bc5b889df2a30c5a94f/jupyter-notebook-gist-0.4.0.tar.gz
 Source99 : https://pypi.python.org/packages/bf/dc/3296bca66627b57fd11bb6420464ebb7e027478f6bc5b889df2a30c5a94f/jupyter-notebook-gist-0.4.0.tar.gz.asc
 Summary  : Create a gist from the Jupyter Notebook UI
 Group    : Development/Tools
-License  : MPL2
+License  : MPL-2.0
 Requires: jupyter-notebook-gist-python
 BuildRequires : ipython
 BuildRequires : jupyter
@@ -47,12 +47,12 @@ python components for the jupyter-notebook-gist package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1486523686
+export SOURCE_DATE_EPOCH=1486523823
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1486523686
+export SOURCE_DATE_EPOCH=1486523823
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
