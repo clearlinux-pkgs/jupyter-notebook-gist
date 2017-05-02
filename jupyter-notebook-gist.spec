@@ -6,7 +6,7 @@
 #
 Name     : jupyter-notebook-gist
 Version  : 0.4.0
-Release  : 2
+Release  : 3
 URL      : https://pypi.python.org/packages/bf/dc/3296bca66627b57fd11bb6420464ebb7e027478f6bc5b889df2a30c5a94f/jupyter-notebook-gist-0.4.0.tar.gz
 Source0  : https://pypi.python.org/packages/bf/dc/3296bca66627b57fd11bb6420464ebb7e027478f6bc5b889df2a30c5a94f/jupyter-notebook-gist-0.4.0.tar.gz
 Source99 : https://pypi.python.org/packages/bf/dc/3296bca66627b57fd11bb6420464ebb7e027478f6bc5b889df2a30c5a94f/jupyter-notebook-gist-0.4.0.tar.gz.asc
