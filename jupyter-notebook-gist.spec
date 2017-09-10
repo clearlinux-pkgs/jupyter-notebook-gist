@@ -6,13 +6,14 @@
 #
 Name     : jupyter-notebook-gist
 Version  : 0.4.0
-Release  : 4
+Release  : 5
 URL      : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz
 Source0  : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz
-Source99 : https://pypi.python.org/packages/bf/dc/3296bca66627b57fd11bb6420464ebb7e027478f6bc5b889df2a30c5a94f/jupyter-notebook-gist-0.4.0.tar.gz.asc
+Source99 : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz.asc
 Summary  : Create a gist from the Jupyter Notebook UI
 Group    : Development/Tools
 License  : MPL-2.0
+Requires: jupyter-notebook-gist-legacypython
 Requires: jupyter-notebook-gist-python
 Requires: ipython
 Requires: jupyter
@@ -39,9 +40,18 @@ BuildRequires : widgetsnbextension
 ### jupyter-notebook-gist
 [![Build Status](https://travis-ci.org/mozilla/jupyter-notebook-gist.svg?branch=master)](https://travis-ci.org/mozilla/jupyter-notebook-gist)
 
+%package legacypython
+Summary: legacypython components for the jupyter-notebook-gist package.
+Group: Default
+
+%description legacypython
+legacypython components for the jupyter-notebook-gist package.
+
+
 %package python
 Summary: python components for the jupyter-notebook-gist package.
 Group: Default
+Requires: jupyter-notebook-gist-legacypython
 
 %description python
 python components for the jupyter-notebook-gist package.
@@ -55,12 +65,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503094815
+export SOURCE_DATE_EPOCH=1505004670
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1503094815
+export SOURCE_DATE_EPOCH=1505004670
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -71,7 +81,10 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
