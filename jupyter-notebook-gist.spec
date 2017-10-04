@@ -6,13 +6,14 @@
 #
 Name     : jupyter-notebook-gist
 Version  : 0.4.0
-Release  : 6
+Release  : 7
 URL      : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz
 Source0  : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz
 Source99 : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz.asc
 Summary  : Create a gist from the Jupyter Notebook UI
 Group    : Development/Tools
 License  : MPL-2.0
+Requires: jupyter-notebook-gist-python3
 Requires: jupyter-notebook-gist-python
 Requires: ipython
 Requires: jupyter
@@ -42,9 +43,19 @@ BuildRequires : widgetsnbextension
 %package python
 Summary: python components for the jupyter-notebook-gist package.
 Group: Default
+Requires: jupyter-notebook-gist-python3
 
 %description python
 python components for the jupyter-notebook-gist package.
+
+
+%package python3
+Summary: python3 components for the jupyter-notebook-gist package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the jupyter-notebook-gist package.
 
 
 %prep
@@ -55,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505096917
+export SOURCE_DATE_EPOCH=1507155798
 python3 setup.py build -b py3
 
 %install
@@ -69,5 +80,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
