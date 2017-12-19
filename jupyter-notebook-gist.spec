@@ -6,7 +6,7 @@
 #
 Name     : jupyter-notebook-gist
 Version  : 0.4.0
-Release  : 8
+Release  : 9
 URL      : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz
 Source0  : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz
 Source99 : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.4.0.tar.gz.asc
