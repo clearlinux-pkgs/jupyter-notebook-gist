@@ -26,7 +26,7 @@ BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : requests
 BuildRequires : setuptools
