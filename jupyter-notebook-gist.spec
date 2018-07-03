@@ -4,7 +4,7 @@
 #
 Name     : jupyter-notebook-gist
 Version  : 0.5.0
-Release  : 17
+Release  : 18
 URL      : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.5.0.tar.gz
 Source0  : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.5.0.tar.gz
 Summary  : Create a gist from the Jupyter Notebook UI
