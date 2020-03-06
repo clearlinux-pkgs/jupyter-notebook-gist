@@ -4,7 +4,7 @@
 #
 Name     : jupyter-notebook-gist
 Version  : 0.5.0
-Release  : 26
+Release  : 27
 URL      : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.5.0.tar.gz
 Source0  : http://pypi.debian.net/jupyter-notebook-gist/jupyter-notebook-gist-0.5.0.tar.gz
 Summary  : Create a gist from the Jupyter Notebook UI
@@ -34,7 +34,8 @@ BuildRequires : virtualenv
 BuildRequires : widgetsnbextension
 
 %description
-UNKNOWN
+### jupyter-notebook-gist
+[![Build Status](https://travis-ci.org/mozilla/jupyter-notebook-gist.svg?branch=master)](https://travis-ci.org/mozilla/jupyter-notebook-gist)
 
 %package license
 Summary: license components for the jupyter-notebook-gist package.
@@ -57,7 +58,13 @@ python components for the jupyter-notebook-gist package.
 Summary: python3 components for the jupyter-notebook-gist package.
 Group: Default
 Requires: python3-core
-Provides: pypi(jupyter-notebook-gist)
+Provides: pypi(jupyter_notebook_gist)
+Requires: pypi(ipython)
+Requires: pypi(jupyter)
+Requires: pypi(notebook)
+Requires: pypi(requests)
+Requires: pypi(six)
+Requires: pypi(widgetsnbextension)
 
 %description python3
 python3 components for the jupyter-notebook-gist package.
@@ -72,8 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583163621
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583536967
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
